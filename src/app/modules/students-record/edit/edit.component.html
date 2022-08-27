@@ -1,0 +1,45 @@
+<div class="container">
+  <h1 class="text-center text-muted">Edit Record {{ myData.id }}</h1>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="mobile" class="form-label">Mobile</label>
+      <input
+        type="tel"
+        class="form-control"
+        id="mobile"
+        formControlName="mobile"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Address</label>
+      <textarea
+        name="address"
+        class="form-control"
+        id="address"
+        cols="20"
+        rows="5"
+        style="resize: none"
+        formControlName="address"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
